@@ -6,4 +6,5 @@ export default defineConfig({
     setupFiles: './src/test/setup.js',
     exclude: ['**/node_modules/**', 'tests/e2e/**'],
   },
+  base: '/agentic-codex-story/',
 });
