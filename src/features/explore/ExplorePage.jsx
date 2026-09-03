@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { appPath } from '../../app/baseUrl.js';
 import { scenes } from '../../content/scenes/scenes.js';
 
@@ -23,9 +24,9 @@ export function ExplorePage() {
             Понятные границы и доказательства результата — вместо магического
             запроса.
           </p>
-          <a className="explore-primary-cta" href={appPath(`/present/${scenes[0].id}`)}>
+          <Link className="explore-primary-cta" to={`/present/${scenes[0].id}`}>
             Начать презентацию
-          </a>
+          </Link>
         </div>
       </section>
     </main>
