@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { appPath } from '../../app/baseUrl.js';
+import { preloadPresentationImages } from '../../app/preloadImages.js';
 import { scenes } from '../../content/scenes/scenes.js';
 
 void React;
 
 export function ExplorePage() {
+  useEffect(() => {
+    preloadPresentationImages(scenes, 0, 3);
+  }, []);
+
   return (
     <main
       id="main-content"

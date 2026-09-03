@@ -1,6 +1,8 @@
 import React, { useCallback, useRef, useState } from 'react';
+import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { appPath } from '../../app/baseUrl.js';
+import { preloadPresentationImages } from '../../app/preloadImages.js';
 import { scenes } from '../../content/scenes/scenes.js';
 import { PresentationControls } from './PresentationControls.jsx';
 import { PresentationExample } from './PresentationExample.jsx';
@@ -28,6 +30,10 @@ export function PresentationPage() {
   const [exampleState, setExampleState] = useState('closed');
   const index = getSceneIndexFromPath(location.pathname);
   const scene = scenes[index];
+  useEffect(() => {
+    preloadPresentationImages(scenes, index, 3);
+  }, [index]);
+
   const goToIndex = useCallback((nextIndex) => { setExampleState('closed'); navigate(`/present/${scenes[Math.max(0, Math.min(scenes.length - 1, nextIndex))].id}`); }, [navigate]);
   const openFullscreen = useCallback(async () => {
     const granted = await requestFullscreen(mainRef.current);
