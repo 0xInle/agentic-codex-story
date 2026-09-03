@@ -1,0 +1,1 @@
+import { expect, it } from 'vitest'; import { render, screen } from '@testing-library/react'; import { createElement } from 'react'; import { DiagramFrame } from './index.js'; it('exposes diagram description', () => { render(createElement(DiagramFrame, { description: 'Текстовое описание' })); expect(screen.getByText('Текстовое описание')).toBeInTheDocument(); });

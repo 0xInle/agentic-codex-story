@@ -1,0 +1,3 @@
+import React, { useState } from 'react'; void React;
+const steps = ['Идея', 'Критерий успеха', 'Проверка'];
+export function SpecificationScene({ scene }) { const [step, setStep] = useState(0); return <section className="scene-responsive-stack" aria-label="Specification builder"><p>{scene.thesis}</p><p>{steps[step]}</p><div className="scene-action-row" role="group" aria-label="Управление спецификацией"><button onClick={() => setStep((value) => Math.min(steps.length - 1, value + 1))}>Следующий шаг спецификации</button><button onClick={() => setStep(0)}>Сбросить спецификацию</button></div><ul className="scene-step-list"><li>Scope</li><li>Acceptance criteria</li><li>Evidence</li></ul></section>; }

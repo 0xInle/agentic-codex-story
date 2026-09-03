@@ -1,0 +1,3 @@
+import { expect, it } from 'vitest'; import { appReducer } from './appReducer.js'; import { initialState } from './initialState.js';
+it('clamps scene navigation', () => { expect(appReducer(initialState, { type: 'NEXT_SCENE' }).activeSceneId).toBe('why-agent'); expect(appReducer(initialState, { type: 'PREVIOUS_SCENE' }).activeSceneId).toBe('presentation-feature'); });
+it('changes mode and timer deterministically', () => { const running = appReducer(initialState, { type: 'START_TIMER' }); expect(running.presentation.running).toBe(true); expect(appReducer(running, { type: 'PAUSE_TIMER' }).presentation.running).toBe(false); expect(appReducer(running, { type: 'SET_MODE', mode: 'presentation' }).mode).toBe('presentation'); });

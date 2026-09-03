@@ -1,0 +1,1 @@
+import { useCallback, useState } from 'react'; export function useNavigationOrigin() { const [origin, setOrigin] = useState(null); const saveOrigin = useCallback((next) => setOrigin(next), []); return { origin, saveOrigin }; }

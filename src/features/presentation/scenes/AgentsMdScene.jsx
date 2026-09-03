@@ -1,0 +1,1 @@
+import React from 'react'; void React; export function AgentsMdScene({ scene }) { return <section className="scene-responsive-stack" aria-label="Repository rules"><p>{scene.thesis}</p><p>Nested rules override root rules.</p><code className="scene-code-block">Modify only listed files.</code></section>; }

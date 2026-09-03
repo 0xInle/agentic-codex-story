@@ -1,0 +1,1 @@
+export const layoutNames = new Set(['split', 'system-canvas', 'editorial', 'timeline', 'terminal', 'diagram', 'full-bleed']); export function resolveMotion(reduced, speed = 1) { return reduced ? { duration: 0, speed: 1 } : { duration: 220 / speed, speed }; }

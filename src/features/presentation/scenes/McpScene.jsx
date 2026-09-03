@@ -1,0 +1,1 @@
+import React from 'react'; void React; export function McpScene({ scene }) { return <section className="scene-responsive-stack" aria-label="MCP capability boundary"><p>{scene.thesis}</p><p>MCP ≠ agent</p><p>Host, client, server, tools, resources and prompts use least privilege.</p></section>; }

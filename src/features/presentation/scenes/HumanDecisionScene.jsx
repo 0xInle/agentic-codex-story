@@ -1,0 +1,1 @@
+import React from 'react'; void React; export function HumanDecisionScene({scene}){return <section className="scene-responsive-stack" aria-label="Human responsibility"><p>{scene.thesis}</p><p>Agentic development is not the removal of the developer. It is the deliberate design of context, tools, boundaries, work and verification.</p></section>;}

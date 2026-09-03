@@ -1,0 +1,1 @@
+import { expect, it } from 'vitest'; import { ROUTES } from './routes.js'; it('defines only landing and presentation route contracts', () => expect(ROUTES).toEqual({ landing: '/', present: '/present' }));

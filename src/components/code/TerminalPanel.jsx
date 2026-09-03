@@ -1,0 +1,1 @@
+import React from 'react'; void React; export function TerminalPanel({ entries = [], label = 'Симулированный terminal' }) { return <section aria-label={label}><output>{entries.join('\n')}</output></section>; }

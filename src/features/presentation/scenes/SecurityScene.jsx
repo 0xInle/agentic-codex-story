@@ -1,0 +1,1 @@
+import React from 'react'; void React; export function SecurityScene({scene}){return <section className="scene-responsive-stack" aria-label="Security boundaries"><p>{scene.thesis}</p><p>Least privilege</p><ul className="scene-step-list"><li>Read-only</li><li>Approval required</li><li>No secrets</li><li>Recovery after failure</li></ul></section>;}

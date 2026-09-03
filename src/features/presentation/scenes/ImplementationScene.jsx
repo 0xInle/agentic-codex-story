@@ -1,0 +1,1 @@
+import React from 'react'; void React; export function ImplementationScene({scene}){return <section className="scene-responsive-stack" aria-label="Implementation loop"><p>{scene.thesis}</p><p>Read → Change → Run → Report</p><p>Simulated output</p></section>;}

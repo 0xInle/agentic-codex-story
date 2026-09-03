@@ -1,0 +1,1 @@
+import React from 'react'; void React; export function SkillsScene({ scene }) { return <section className="scene-responsive-stack" aria-label="Skills and plugins"><p>{scene.thesis}</p><p>Skill ≠ plugin</p><p>Skills are reusable workflows; availability depends on the environment.</p></section>; }

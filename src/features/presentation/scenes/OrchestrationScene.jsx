@@ -1,0 +1,1 @@
+import React from 'react'; void React; export function OrchestrationScene({ scene }) { return <section className="scene-responsive-stack orchestration-surface" aria-label="Orchestration"><p>{scene.thesis}</p><p>Human checkpoint</p><p>Координация показывает зависимости, проверки и точки решения без запуска внешних процессов.</p></section>; }

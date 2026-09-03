@@ -1,0 +1,1 @@
+import { expect, it } from 'vitest'; import { parsePersistedState } from './persistence.js'; it('rejects corrupt and stale persisted state', () => { expect(parsePersistedState('bad')).toBeNull(); expect(parsePersistedState('{"version":0}')).toBeNull(); });

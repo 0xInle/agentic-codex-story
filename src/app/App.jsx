@@ -1,0 +1,1 @@
+import React from 'react'; import { Providers } from './providers.jsx'; import { AppRouter } from './router.jsx'; void React; void Providers; void AppRouter; export default function App() { return <Providers><AppRouter /></Providers>; }

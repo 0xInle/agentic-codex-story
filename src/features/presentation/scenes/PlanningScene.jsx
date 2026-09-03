@@ -1,0 +1,1 @@
+import React from 'react'; void React; export function PlanningScene({ scene }) { return <section className="scene-responsive-stack" aria-label="Implementation planning"><p>{scene.thesis}</p><p>SPEC задаёт успех; plan задаёт шаги.</p><ul className="scene-step-list"><li>Outcome</li><li>Dependency</li><li>Check</li></ul></section>; }

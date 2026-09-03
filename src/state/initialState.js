@@ -1,0 +1,1 @@
+import { scenes } from '../content/scenes/scenes.js'; export const initialState = { activeSceneId: scenes[0].id, visitedSceneIds: [scenes[0].id], mode: 'explore', presentation: { elapsedMs: 0, running: false } };

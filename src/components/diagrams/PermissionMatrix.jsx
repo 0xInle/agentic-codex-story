@@ -1,0 +1,1 @@
+import React from 'react'; void React; export function PermissionMatrix({ rows = [] }) { return <table><tbody>{rows.map((row) => <tr key={row.id}><th>{row.label}</th><td>{row.decision}</td></tr>)}</tbody></table>; }

@@ -1,0 +1,2 @@
+import React from 'react'; void React;
+export function ArchitectureScene({ scene }) { return <section className="scene-responsive-stack" aria-label="Architecture choices"><p>{scene.thesis}</p><ul className="scene-step-list"><li>Simple</li><li>Feature-based</li><li>Layered</li></ul><pre className="scene-code-block" aria-label="Структура проекта">src/content → features → components</pre><p>Не усложняйте архитектуру раньше подтверждённой потребности.</p></section>; }

@@ -1,0 +1,10 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { expect, it } from 'vitest';
+import { scenes } from '../../content/scenes/scenes.js';
+import { SceneRenderer } from './SceneRenderer.jsx';
+import { sceneRenderers } from './sceneRenderers.js';
+void React; void SceneRenderer;
+it('covers every content renderer key and gives slides a shared scene surface', () => { expect(scenes.every((scene) => sceneRenderers[scene.rendererKey])).toBe(true); const { rerender } = render(<SceneRenderer scene={scenes[0]} mode="presentation" isActive />); expect(screen.getByTestId('scene-surface')).toHaveClass('scene-output'); expect(screen.getByTestId('scene-surface')).toHaveAttribute('data-mode', 'presentation'); rerender(<SceneRenderer scene={scenes[0]} mode="landing" isActive />); expect(screen.getByTestId('scene-surface')).toHaveAttribute('data-mode', 'landing'); });
+it('renders one content-owned title in the frame and one key idea in the scene', () => { render(<SceneRenderer scene={scenes[0]} mode="presentation" isActive />); expect(screen.queryByText('ФИЧА / 01')).not.toBeInTheDocument(); expect(screen.queryByRole('heading', { level: 2 })).not.toBeInTheDocument(); expect(screen.getByText('Неважно, сайт это или API: агент проходит по правилам для реализации.')).toBeInTheDocument(); });
+it('keeps missing renderers accessible as alerts', () => { render(<SceneRenderer scene={{ rendererKey: 'missing' }} mode="explore" isActive={false} simulationState={null} onSimulationChange={() => {}} />); expect(screen.getByRole('alert')).toHaveTextContent('Не найден renderer сцены.'); });

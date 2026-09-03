@@ -1,0 +1,1 @@
+import React from 'react'; void React; export function VerificationScene({scene}){return <section className="scene-responsive-stack" aria-label="Verification stack"><p>{scene.thesis}</p><p>Build is not verification.</p><p>Unit, component, integration, E2E, accessibility, browser, security, human review.</p></section>;}
