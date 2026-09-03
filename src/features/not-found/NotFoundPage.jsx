@@ -1,1 +1,1 @@
-import React from 'react'; void React; export function NotFoundPage(){return <main><h1>Страница не найдена</h1><a href="/">На главную</a></main>;}
+import React from 'react'; import { appPath } from '../../app/baseUrl.js'; void React; export function NotFoundPage(){return <main><h1>Страница не найдена</h1><a href={appPath('/')}>На главную</a></main>;}
